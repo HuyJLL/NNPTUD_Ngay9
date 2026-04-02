@@ -19,11 +19,11 @@ const messageSchema = new mongoose.Schema({
         },
         text: { 
             type: String, 
-            required: true // Nếu là 'text' thì chứa nội dung, nếu là 'file' thì chứa đường dẫn (path)
+            required: true 
         }
     }
 }, { 
-    timestamps: true // Bắt buộc phải có để lấy ra tin nhắn cuối cùng dựa trên thời gian (createdAt)
+    timestamps: true 
 });
 
 module.exports = mongoose.model('Message', messageSchema);
